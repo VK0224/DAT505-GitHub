@@ -25,14 +25,14 @@ function init(){
 function geometry(){
   // Create a Cube Mesh with basic material ---------
   geometry1 = new THREE.BoxGeometry(100, 100, 100);
-  material1 = new THREE.MeshLambertMaterial( { color: "	#C6E2FF" } );
+  material1 = new THREE.MeshNormalMaterial( { color: "	#C6E2FF" } );
   mesh1 = new THREE.Mesh( geometry1, material1 );
   mesh1.position.set(1,1,1);
   mesh1.position.z = -1000;
 
   scene.add( mesh1 );
 
-  geometry2 = new THREE.DodecahedronGeometry(400, 400, 400);
+  geometry2 = new THREE.BoxGeometry(400, 400, 400);
   material2 = new THREE.MeshNormalMaterial( { color: "	#0000CD" , wireframe : true } );
   mesh2 = new THREE.Mesh( geometry2, material2 );
   mesh2.position.set(1,1,1);
