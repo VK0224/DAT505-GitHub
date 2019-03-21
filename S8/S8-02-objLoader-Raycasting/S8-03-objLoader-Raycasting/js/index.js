@@ -65,6 +65,7 @@ function init() {
   //container.appendChild( stats.dom );
   document.addEventListener( 'mousemove', onDocumentMouseMove, false );
   window.addEventListener( 'resize', onWindowResize, false );
+  document.addEventListener( "mousedown", onDocumentMouseDown, false );
 }
 
 function onWindowResize() {
@@ -77,6 +78,13 @@ function onDocumentMouseMove( event ) {
   event.preventDefault();
   mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
   mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+}
+
+function onDocumentMouseDown( event ){
+  var intersects = raycaster.intersectObjects(objects,true);
+  if(intersects.length>0){
+    intersects[0].object.material.color.set(Math.random()*0xffffff);
+  }
 }
 
 //
@@ -100,6 +108,7 @@ function render() {
   raycaster.setFromCamera( mouse, camera );
   //var intersects = raycaster.intersectObjects( scene.children );
 
+  /*
   var intersects = raycaster.intersectObjects( objects, true );
 
   if ( intersects.length > 0 ) {
@@ -113,5 +122,6 @@ function render() {
     if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
     INTERSECTED = null;
   }
+  */
   renderer.render( scene, camera );
 }
