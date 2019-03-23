@@ -116,7 +116,7 @@ function render() {
       if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
       INTERSECTED = intersects[ 0 ].object;
       INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
-      INTERSECTED.material.emissive.setHex( 0xff0000 );
+      INTERSECTED.material.emissive.setHex( Math.random()*0xff0000 );
 
       audioLoader.load( 'audio/cup.wav', function( buffer ) {
         sound.setBuffer( buffer );
