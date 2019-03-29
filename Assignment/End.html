@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three.js</title>
+    <style>
+      body{margin:0;}
+      canvas{width:100%;height:100%}
+    </style>
+    <script src="build/three.js"></script>
+</head>
+<body>
+  <script language="javascript">
+// 这个脚本是 ie6和ie7 通用的脚本
+function custom_close(){
+if
+(confirm("Are you sure you want to close this page?")){
+window.opener=null;
+window.open('','_self');
+window.close();
+}
+else{}
+}
+</script>
+
+
+
+<input id="btnClose" type="button" value="Close" onClick="custom_close()" />
+
+</body>
+</html>
