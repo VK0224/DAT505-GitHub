@@ -6,6 +6,12 @@
     <style>
       body{margin:0;}
       canvas{width:100%;height:100%}
+      #Button {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     </style>
     <script src="build/three.js"></script>
 </head>
@@ -23,9 +29,11 @@ else{}
 }
 </script>
 
+<div id="Button">
 
+<input id="btnClose" type="button" value="Close" onClick="custom_close()"  style="width:100px;height:100px"/>
 
-<input id="btnClose" type="button" value="Close" onClick="custom_close()" />
+  </div>
 
 </body>
 </html>
