@@ -22,7 +22,7 @@ function init() {
   renderer.setSize(W, H);
   //renderer.shadowMapEnabled = true;
 
-  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  //controls = new THREE.OrbitControls(camera, renderer.domElement);
 
   //Create a two dimensional grid of objects, and position them accordingly
   for (var x = -30; x < 30; x += 5) { // Start from -35 and sequentially add one every 5 pixels
