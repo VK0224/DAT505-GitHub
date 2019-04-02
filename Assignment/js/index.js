@@ -1,52 +1,89 @@
-//Global variables
-var scene, camera, renderer;
-var geometry, material, mesh;
+var renderer, scene, camera;
+var cubes = [];
+var randomSpeedX=[];
 
-function init(){
-  // Create an empty scene --------------------------
+function init() {
   scene = new THREE.Scene();
 
-  // Create a basic perspective camera --------------
-  camera = new THREE.PerspectiveCamera(35, window.innerWidth/window.innerHeight, 300, 10000 );
+  var W = window.innerWidth,
+  H = window.innerHeight;
 
-  // Create a renderer with Antialiasing ------------
+  camera = new THREE.PerspectiveCamera(45, W / H, .1, 1000);
+  camera.position.set(0, 55, 85);
+  camera.lookAt(scene.position);
+
+  var spotLight = new THREE.SpotLight(0xFFFFFF);
+  spotLight.position.set(0, 1000, 0);
+  scene.add(spotLight);
+  //spotLight.castShadow = true;
+
   renderer = new THREE.WebGLRenderer({antialias:true});
+  renderer.setClearColor(0x17293a);
+  renderer.setSize(W, H);
+  //renderer.shadowMapEnabled = true;
 
-  // Configure renderer clear color
-  renderer.setClearColor("#000000");
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-  // Configure renderer size
-  renderer.setSize( window.innerWidth, window.innerHeight );
+  //Create a two dimensional grid of objects, and position them accordingly
+  for (var x = -30; x < 30; x += 5) { // Start from -35 and sequentially add one every 5 pixels
+    for (var y = -30; y < 30; y += 5) {
+      var boxGeometry = new THREE.SphereGeometry(3, 3, 3);
+      //The color of the material is assigned a random color
+      var boxMaterial = new THREE.MeshLambertMaterial({color:  0xFFFFFF});
+      /*var boxMaterial = new THREE.MeshPhongMaterial( {
+    		color: 0xffffff,
+    		specular: 0x050505,
+    		shininess: 50,
+    		map: THREE.ImageUtils.loadTexture('images/eye.png'),
+    	});*/
+      //mesh.castShadow = true;
 
-  // Append Renderer to DOM
-  document.body.appendChild( renderer.domElement );
+/*
+if(x==-5 && y ==-5){
+  boxMaterial =new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
+}else if (x ==5 && y==5){
+    boxMaterial =new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
+  }else {
+    boxMaterial =new THREE.MeshLambertMaterial({color:  0xFFFFFF});
+    }
+*/
+
+
+      var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+
+      mesh.position.x = x;
+      mesh.position.z = y;
+      mesh.rotation.x = 360*Math.random();
+      mesh.rotation.y = 360*Math.random();
+      mesh.rotation.z = 360*Math.random();
+
+var randomValueX =(Math.random()*0.1)-0.05;
+randomSpeedX.push(randomValueX)
+
+      scene.add(mesh);
+      cubes.push(mesh);
+    }
+  }
+
+  document.body.appendChild(renderer.domElement);
 }
 
-function geometry(){
-  // Create a Cube Mesh with basic material ---------
-  geometry = new THREE.CylinderGeometry(50, 50, 200,32);
-  material = new THREE.MeshNormalMaterial( { color: "#FF00FF" } );
-  mesh = new THREE.Mesh( geometry, material );
-  mesh.position.z = -1000;
-  mesh.rotation.x = 1.55;
+var rot =0;
 
-  // Add mesh to scene
-  scene.add( mesh );
-}
+function drawFrame(ts){
+  requestAnimationFrame(drawFrame);
 
-// Render Loop
-var render = function () {
-  requestAnimationFrame( render );
+  rot += 0.01;
 
-  //mesh.rotation.x += 0.01; //Continuously rotate the mesh
-  //mesh.rotation.y += 0.01;
+  //forEach takes all the array entries and passes the c as the object, and i as the index
+  cubes.forEach(function(c, i) {
+c.scale.y =Math.sin(ts/500*Math.PI +
+c.position.x*4.95 + c.position.z/10) + 1;
 
-  renderer.setClearColor("#000000");
+});
 
-  // Render the scene
   renderer.render(scene, camera);
-};
+}
 
 init();
-geometry();
-render();
+drawFrame();
