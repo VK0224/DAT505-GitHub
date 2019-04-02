@@ -27,15 +27,15 @@ function init() {
   //Create a two dimensional grid of objects, and position them accordingly
   for (var x = -30; x < 30; x += 5) { // Start from -35 and sequentially add one every 5 pixels
     for (var y = -30; y < 30; y += 5) {
-      var boxGeometry = new THREE.SphereGeometry(3, 3, 3);
+      var boxGeometry = new THREE.SphereGeometry(3, 32, 3);
       //The color of the material is assigned a random color
-      var boxMaterial = new THREE.MeshLambertMaterial({color:  0xFFFFFF});
-      /*var boxMaterial = new THREE.MeshPhongMaterial( {
+      //var boxMaterial = new THREE.MeshLambertMaterial({color:  0xFFFFFF});
+      var boxMaterial = new THREE.MeshPhongMaterial( {
     		color: 0xffffff,
     		specular: 0x050505,
     		shininess: 50,
     		map: THREE.ImageUtils.loadTexture('images/eye.png'),
-    	});*/
+    	});
       //mesh.castShadow = true;
 
 /*
