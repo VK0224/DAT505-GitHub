@@ -25,8 +25,8 @@ function init() {
   //controls = new THREE.OrbitControls(camera, renderer.domElement);
 
   //Create a two dimensional grid of objects, and position them accordingly
-  for (var x = -30; x < 30; x += 5) { // Start from -35 and sequentially add one every 5 pixels
-    for (var y = -30; y < 30; y += 5) {
+  for (var x = -150; x < 150; x += 20) { // Start from -35 and sequentially add one every 5 pixels
+    for (var y = -150; y < 150; y += 20) {
       var boxGeometry = new THREE.SphereGeometry(3, 32, 3);
       //The color of the material is assigned a random color
       //var boxMaterial = new THREE.MeshLambertMaterial({color:  0xFFFFFF});
