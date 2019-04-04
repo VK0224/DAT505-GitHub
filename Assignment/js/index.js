@@ -22,19 +22,19 @@ function init() {
   renderer.setSize(W, H);
   //renderer.shadowMapEnabled = true;
 
-  //controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
 
   //Create a two dimensional grid of objects, and position them accordingly
-  for (var x = -150; x < 150; x += 20) { // Start from -35 and sequentially add one every 5 pixels
-    for (var y = -150; y < 150; y += 20) {
-      var boxGeometry = new THREE.SphereGeometry(3, 32, 3);
+  for (var x = -120; x < 180; x += 30) { // Start from -35 and sequentially add one every 5 pixels
+    for (var y = -150; y < 150; y += 30) {
+      var boxGeometry = new THREE.CircleGeometry(5, 32);
       //The color of the material is assigned a random color
       //var boxMaterial = new THREE.MeshLambertMaterial({color:  0xFFFFFF});
       var boxMaterial = new THREE.MeshPhongMaterial( {
     		color: 0xffffff,
     		specular: 0x050505,
     		shininess: 50,
-    		map: THREE.ImageUtils.loadTexture('images/eye.png'),
+    		map: THREE.ImageUtils.loadTexture('images/perlin-512.png'),
     	});
       //mesh.castShadow = true;
 
@@ -53,9 +53,9 @@ if(x==-5 && y ==-5){
 
       mesh.position.x = x;
       mesh.position.z = y;
-      mesh.rotation.x = 360*Math.random();
-      mesh.rotation.y = 360*Math.random();
-      mesh.rotation.z = 360*Math.random();
+      mesh.rotation.x = 30.9;
+      mesh.rotation.y = 0;
+      //mesh.rotation.z = 360*Math.random();
 
 var randomValueX =(Math.random()*0.1)-0.05;
 randomSpeedX.push(randomValueX)
@@ -77,8 +77,8 @@ function drawFrame(ts){
 
   //forEach takes all the array entries and passes the c as the object, and i as the index
   cubes.forEach(function(c, i) {
-c.scale.y =Math.sin(ts/500*Math.PI +
-c.position.x*4.95 + c.position.z/10) + 1;
+c.scale.x =Math.sin(ts/500*Math.PI +c.position.x*4.95 + c.position.z/10) + 1;
+c.scale.y =Math.sin(ts/500*Math.PI +c.position.x*4.95 + c.position.z/10) + 1;
 
 });
 
