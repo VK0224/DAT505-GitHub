@@ -100,9 +100,9 @@ function drawFrame(ts){
   rot += 0.005;
 
   //forEach takes all the array entries and passes the c as the object, and i as the index
-  cubes1.forEach(function(c, i) {
-c.scale.x =Math.sin(ts/500*Math.PI +c.position.x*4.95 + c.position.z/10) + 1;
-c.scale.y =Math.sin(ts/500*Math.PI +c.position.x*4.95 + c.position.z/10) + 1;
+  cubes1.forEach(function(c1, i) {
+c1.scale.x =Math.sin(ts/500*Math.PI +c1.position.x*4.95 + c1.position.z/10) + 1;
+c1.scale.y =Math.sin(ts/500*Math.PI +c1.position.x*4.95 + c1.position.z/10) + 1;
 
 });
 
