@@ -1,3 +1,4 @@
+//Global variables
 var renderer, scene, camera;
 var cubes = [];
 var cubes1 = [];
@@ -76,6 +77,7 @@ function init() {
 }
 
 
+
   document.body.appendChild(renderer.domElement);
 }
 
@@ -91,8 +93,6 @@ c.scale.x =Math.sin(ts/750*Math.PI +c.position.x*2 + c.position.z/15) + 1;
 c.scale.y =Math.sin(ts/750*Math.PI +c.position.x*2 + c.position.z/15) + 1;
 
 });
-
-
 
   rot += 0.05;
 
