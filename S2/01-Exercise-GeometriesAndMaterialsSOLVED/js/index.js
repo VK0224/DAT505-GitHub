@@ -1,7 +1,3 @@
-// -----------------------------------------------------------------------------
-// BASIC SETUP
-// ------------------------------------------------
-
 // Create an empty scene --------------------------
 var scene = new THREE.Scene();
 
@@ -28,12 +24,6 @@ var light2 = new THREE.PointLight(0xffffff, 0.5);
 scene.add(light2);
 // ------------------------------------------------
 
-// -----------------------------------------------------------------------------
-
-// ------------------------------------------------
-// Main Content
-// ------------------------------------------------
-
 // Create a Cube Mesh with basic material ---------
 var geometry = new THREE.CylinderGeometry(50, 50, 50,50);
 var geometry1 = new THREE.TorusKnotBufferGeometry(40, 40, 40,40);
@@ -54,7 +44,6 @@ var material6 = new THREE.MeshLambertMaterial({
   opacity: 1
 });
 
-
 //MATERIAL 4:
 var material3 = new THREE.MeshPhongMaterial({shininess: 1,wireframe : true});
 
@@ -69,8 +58,6 @@ var material = new THREE.MeshLambertMaterial({
   emissiveIntensity: 1,
   specularMap: null
 });
-
-
 
 //MATERIAL 6 (shiny material):
 var material4 = new THREE.MeshPhongMaterial({
@@ -89,8 +76,6 @@ var material4 = new THREE.MeshPhongMaterial({
   specularMap: null
 });
 
-
-
 //MATERIAL 6 (combination of shiny + non-shinny):
 var material5 = new THREE.MeshStandardMaterial({
   color: 0xF3FFE2,
@@ -98,7 +83,6 @@ var material5 = new THREE.MeshStandardMaterial({
   metalness: 0.5,
   wireframe : true
 });
-
 
 /*
 //MATERIAL 7 (physical-based material)
@@ -145,6 +129,7 @@ var mesh5 = new THREE.Mesh( geometry1, material3 );
 mesh5.position.z = -1000;
 mesh5.position.x = -500;
 mesh5.position.y = -200;
+
 /*
 var mesh6 = new THREE.Mesh( geometry3, material1 );
 mesh6.position.z = -1000;
