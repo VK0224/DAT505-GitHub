@@ -67,10 +67,6 @@ for (var i =0;i<5; i++){
   cubes[6].rotation.x += randomSpeedX[6];
 cubes[18].rotation.y += randomSpeedY[18];
 }
-  //forEach takes all the array entries and passes the c as the object, and i as the index
-// cubes.forEach(function(c, i) {
-//cubes.rotation.z = rot; //Rotate the object that is referenced in c
-  //});
 
   renderer.render(scene, camera);
 }

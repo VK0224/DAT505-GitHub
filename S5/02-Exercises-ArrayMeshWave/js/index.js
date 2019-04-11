@@ -29,15 +29,10 @@ function init() {
   //Create a two dimensional grid of objects, and position them accordingly
   for (var x = -30; x < 30; x += 5) { // Start from -35 and sequentially add one every 5 pixels
     for (var y = -30; y < 30; y += 5) {
-      var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
+      var boxGeometry = new THREE.SphereGeometry(3, 3, 3);
       //The color of the material is assigned a random color
       var boxMaterial = new THREE.MeshLambertMaterial({color:  0xFFFFFF});
       //mesh.castShadow = true;
-
-/*var texture1 = new THREE.TextureLoader().load(
-  "textures/texture"+ Math.floor(Math.random()*1) +".jpg");
-  var boxMaterial = new THREE.MeshBASICtMaterial
-)*/
 
 if(x==-5 && y ==-5){
   boxMaterial =new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
@@ -68,29 +63,19 @@ randomSpeedX.push(randomValueX)
   document.body.appendChild(renderer.domElement);
 }
 
-//var scaleCube = -100;
 var rot =0;
 
 function drawFrame(ts){
   requestAnimationFrame(drawFrame);
 
-//scaleCube += 0.02 ;
-//if(scaleCube> 100)scaleCube = -100;
   rot += 0.01;
 
   //forEach takes all the array entries and passes the c as the object, and i as the index
   cubes.forEach(function(c, i) {
 
-    //c.rotation.z += randomSpeedX[6]; //Rotate the object that is referenced in c
-    //c.scale.x = scaleCube;
-    //cubes[6].material = new THREE.MeshLambertMaterial({color:  0xFF00FF});
+ //Rotate the object that is referenced in c
 c.scale.y =Math.sin(ts/500*Math.PI +
 c.position.x*4.95 + c.position.z/10) + 1;
-
-
-  //        cubes[18].rotation.z += randomSpeedX[18];
-
-
 });
 
   renderer.render(scene, camera);
