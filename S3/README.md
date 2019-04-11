@@ -125,3 +125,7 @@ render();
 ```
 
 If everything went well you should see [this](https://github.com/VK0224/DAT505-GitHub/tree/master/S3).
+
+Texture:
+![S3-01](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S3-01.PNG)
+![S3-03](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S3-03.PNG)

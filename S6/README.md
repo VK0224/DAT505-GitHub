@@ -150,3 +150,6 @@ setup();
 ```
 
 If everything went well you should see [this](https://github.com/VK0224/DAT505-GitHub/tree/master/S6).
+
+Texture:
+![S6-02](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S6-02.PNG)

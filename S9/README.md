@@ -156,3 +156,6 @@ function render() {
 ```
 
 If everything went well you should see [this](https://github.com/VK0224/DAT505-GitHub/tree/master/S9).
+
+Texture:
+![S9-02](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S9-02.PNG)

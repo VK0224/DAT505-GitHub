@@ -420,3 +420,8 @@ function render() {
 ```
 
 If everything went well you should see [this](https://github.com/VK0224/DAT505-GitHub/tree/master/S8).
+
+Texture:
+![S8-01](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S8-01.PNG)
+![S8-03](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S8-03.PNG)
+![S8-05](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S8-05.PNG)

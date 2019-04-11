@@ -217,3 +217,7 @@ function onDocumentMouseMove( event ) {
 
 ```
 If everything went well you should see [this](https://github.com/VK0224/DAT505-GitHub/tree/master/S7).
+
+Texture:
+![S7-02](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S7-02.PNG)
+![S7-04](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S7-04.PNG)

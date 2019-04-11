@@ -103,3 +103,7 @@ drawFrame();
 ```
 
 If everything went well you should see [this](https://github.com/VK0224/DAT505-GitHub/tree/master/S5).
+
+Texture:
+![S5-01](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S5-01.PNG)
+![S5-02](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S5-02.PNG)

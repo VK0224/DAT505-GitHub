@@ -93,3 +93,9 @@ drawFrame();
 ```
 
 If everything went well you should see [this](https://github.com/VK0224/DAT505-GitHub/tree/master/S4).
+
+Texture:
+![S4-01](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S4-01.PNG)
+![S4-02](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S4-02.PNG)
+![S4-03](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S4-03.PNG)
+![S4-04](https://github.com/VK0224/DAT505-GitHub/blob/master/Textures/S4-04.PNG)
