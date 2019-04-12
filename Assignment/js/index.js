@@ -42,8 +42,8 @@ function init() {
 
       mesh.castShadow = true;
 
-      mesh.position.x = x;
-      mesh.position.z = y;
+      mesh.position.x = Math.floor( Math.random() * 200 - 100 ) * 4;
+      mesh.position.z = Math.floor( Math.random() * 200 - 100 ) * 4;
       mesh.rotation.x = -45.5;
       mesh.rotation.y = 0;
       //mesh.rotation.z = 360*Math.random();
@@ -62,8 +62,8 @@ function init() {
   var material = new THREE.MeshBasicMaterial( { color: 0xffff00, side: THREE.DoubleSide } );
   var mesh1 = new THREE.Mesh( geometry, material );
 
-  mesh1.position.x = x;
-  mesh1.position.z = y;
+  mesh1.position.x = Math.floor( Math.random() * 200 - 100 ) * 4;
+  mesh1.position.z = Math.floor( Math.random() * 200 - 100 ) * 4;
   mesh1.rotation.x = -45.5;
   mesh1.rotation.y = 0;
 
@@ -76,9 +76,7 @@ function init() {
 }
 }
 
-
-
-  document.body.appendChild(renderer.domElement);
+  document.getElementById("canvas1").appendChild(renderer.domElement);
 }
 
 var rot =0;

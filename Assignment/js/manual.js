@@ -131,7 +131,7 @@ f3.add(controller,"rotationZ",-3.14,3.14).onChange(function(){
 mesh.rotation.z = (controller.rotationZ);
 });
 
-  document.body.appendChild(renderer.domElement);
+  document.getElementById("canvas2").appendChild(renderer.domElement);
 }
 
 var rot =0;
