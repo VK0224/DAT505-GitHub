@@ -44,6 +44,36 @@
 
 </head>
 <body>
+<script>
+  var loader = new THREE.FontLoader();
+
+  loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
+
+    var geometry = new THREE.TextGeometry( 'Hello three.js!', {
+      font: font,
+      size: 80,
+      height: 5,
+      curveSegments: 12,
+      bevelEnabled: true,
+      bevelThickness: 10,
+      bevelSize: 8,
+      bevelSegments: 5
+    } );
+  } );
+  </script>
+  
+  <script language="javascript">
+// 这个脚本是 ie6和ie7 通用的脚本
+function custom_close(){
+if
+(confirm("Are you sure you want to close this page?")){
+window.opener=null;
+window.open('','_self');
+window.close();
+}
+else{}
+}
+</script>
   <div id="Button">
         <input type='button' id="btn" value='Auto' onclick="showCanvas()" style="width:100px;height:100px" />
         <input type='button' id="btn" value='Manual' onclick="showCanvas1()" style="width:100px;height:100px" />
