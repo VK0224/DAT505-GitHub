@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three.js</title>
+    <style>
+      body{margin:0;}
+
+      #Button {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-image: url(images/1.jpg);
+        background-repeat:no-repeat; background-size:100% 100%;
+        text-align: center;
+      }
+      #btn{
+        margin-top: 20%;
+      }
+        #canvas1{width:100%;height:100%;visibility:hidden;}
+        #End{visibility: hidden;}
+    </style>
+    <script type = "text/javascript">
+    function changeFontSize(size) {
+      var divNode = document.getElementById("div");
+      divNode.value.fontsize = '100px';
+    }
+
+    function showCanvas(){
+      document.getElementById("canvas1").style.visibility = "visible";
+      document.getElementById("End").style.visibility = "visible";
+      document.getElementById("Button").style.visibility = "hidden";
+    }
+    </script>
+    <script src="build/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/dat.gui.min.js"></script>
+
+</head>
+<body>
+<script language="javascript">
+// 这个脚本是 ie6和ie7 通用的脚本
+function custom_close(){
+if
+(confirm("Are you sure you want to close this page?")){
+window.opener=null;
+window.open('','_self');
+window.close();
+}
+else{}
+}
+</script>
+  <div id="Button">
+        <input type='button' id="btn" value='Appreciation' onclick="showCanvas()" style="width:100px;height:100px" />
+    </div>
+    <div id="canvas1"></div>
+    <div id="End" style=" position: fixed;bottom:0px;right:0px;">
+          <input type='button' id="btn" value='End' onclick="window.open('End.html')" />
+      </div>
+    <script src="js/appreciation.js"></script>
+
+</body>
+</html>
