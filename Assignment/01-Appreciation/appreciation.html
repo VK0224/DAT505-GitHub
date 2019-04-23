@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three.js</title>
+    <!--  Simple reset to delete the margins  -->
+    <style>
+      body{margin:0;
+        font-family: Monospace;
+      }
+      #canvas1{width:100%;height:100%;visibility:visible;}
+    </style>
+    <!--  Three.js CDN  -->
+    <script src="build/three.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/dat.gui.min.js"></script>
+
+</head>
+<body>
+  <!--  Objects in js are called via div  -->
+  <div id="canvas1"></div>
+  <div id="Button" style=" position: fixed;bottom:0px;right:0px;">
+        <input type='button' id="btn" value='End' onclick="custom_close()" />
+    </div>
+<!--  Our code  -->
+<script src="js/appreciation.js" ></script>
+</body>
+</html>

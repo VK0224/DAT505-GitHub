@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Three.js</title>
+    <!--  Simple reset to delete the margins and mouse effects  -->
     <style>
       body{margin:0;}
-
       #Button {
         width: 100%;
         height: 100%;
@@ -17,27 +17,47 @@
       #btn{
         margin-top: 20%;
       }
+      .draw {
+    position: fixed;
+    width: 1px;
+    line-height: 1px;
+    pointer-events: none;
+}
+@keyframes floatOne {
+0% {
+opacity:1;
+}
+50% {
+opacity:1;
+}
+100% {
+opacity:0;
+transform:translate3D(0, -20px, 0) scale(5) rotate(45deg);
+}
+}
         #canvas1{width:100%;height:100%;visibility:hidden;}
         #End{visibility: hidden;}
     </style>
+    <!--  Switch pages in the same window  -->
     <script type = "text/javascript">
     function changeFontSize(size) {
       var divNode = document.getElementById("div");
       divNode.value.fontsize = '100px';
     }
-
     function showCanvas(){
       document.getElementById("canvas1").style.visibility = "visible";
       document.getElementById("End").style.visibility = "visible";
       document.getElementById("Button").style.visibility = "hidden";
     }
     </script>
+    <!--  Three.js CDN  -->
     <script src="build/three.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/OrbitControls.js"></script>
     <script src="js/dat.gui.min.js"></script>
-
 </head>
 <body>
+<!--  The confirm and cancel buttons pop up  -->
 <script language="javascript">
 // 这个脚本是 ie6和ie7 通用的脚本
 function custom_close(){
@@ -50,14 +70,15 @@ window.close();
 else{}
 }
 </script>
+  <!--  Objects in js are called via div  -->
   <div id="Button">
-        <input type='button' id="btn" value='Appreciation' onclick="showCanvas()" style="width:100px;height:100px" />
+        <input type='button' id="btn" value='Start' onclick="showCanvas()" style="width:100px;height:100px" />
     </div>
     <div id="canvas1"></div>
     <div id="End" style=" position: fixed;bottom:0px;right:0px;">
           <input type='button' id="btn" value='End' onclick="window.open('End.html')" />
       </div>
+    <!--  Our code  -->
     <script src="js/appreciation.js"></script>
-
 </body>
 </html>

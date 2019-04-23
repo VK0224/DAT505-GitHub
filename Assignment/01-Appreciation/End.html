@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Three.js</title>
+    <!--  Simple reset to delete the margins and mouse effects  -->
     <style>
       body{margin:0;}
       #canvas{width:100%;height:100%;visibility:visible;}
@@ -13,10 +14,13 @@
         transform: translate(-50%, -50%);
       }
     </style>
+    <!--  Three.js CDN  -->
     <script src="build/three.js"></script>
 </head>
 <body>
+  <!--  Call the path of image  -->
   <img src="images/5-1.jpg" width="1535" height="725" />
+  <!--  The confirm and cancel buttons pop up  -->
   <script language="javascript">
 // 这个脚本是 ie6和ie7 通用的脚本
 function custom_close(){
@@ -29,12 +33,9 @@ window.close();
 else{}
 }
 </script>
-
+<!--  Objects in js are called via div  -->
 <div id="Button">
-
 <input id="btnClose" type="button" value="Close" onClick="custom_close()"  style="width:100px;height:100px"/>
-
   </div>
-
 </body>
 </html>
