@@ -1,5 +1,5 @@
 # Visual immersion
-******************
+
 #### LIANG SUN B161006083
 
 ## The first part of work
