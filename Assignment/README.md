@@ -1,6 +1,7 @@
 # Visual immersion
 
-#### LIANG SUN B161006083
+#### NUA Student ID: B161006083
+#### Name: LIANG SUN
 
 ## The first part of work
 **Visual immersion**
